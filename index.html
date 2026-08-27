@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>梁芷芸 Anita Liang｜PM / 遊戲產品企劃</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0b1020;
+            --bg-soft: #11182b;
+            --panel: #151e33;
+            --panel-light: #1b2740;
+            --line: rgba(255,255,255,.10);
+            --text: #f4f7fb;
+            --muted: #aeb9ca;
+            --purple: #8b5cf6;
+            --purple-soft: #c4b5fd;
+            --cyan: #38bdf8;
+            --green: #34d399;
+            --orange: #fb923c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(139,92,246,.15), transparent 28%),
+                radial-gradient(circle at 85% 20%, rgba(56,189,248,.12), transparent 25%),
+                var(--bg);
+            color: var(--text);
+        }
+
+        .font-display {
+            font-family: "Space Grotesk", "Noto Sans TC", sans-serif;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+            background-size: 38px 38px;
+        }
+
+        .glass {
+            background: rgba(21, 30, 51, .72);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--line);
+        }
+
+        .section-label {
+            color: var(--purple-soft);
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            font-weight: 800;
+            letter-spacing: -.04em;
+            line-height: 1.15;
+        }
+
+        .card-hover {
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139,92,246,.5);
+            box-shadow: 0 25px 60px rgba(0,0,0,.25);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -33px;
+            top: 29px;
+            width: 13px;
+            height: 13px;
+            border-radius: 999px;
+            background: var(--purple);
+            box-shadow: 0 0 0 5px rgba(139,92,246,.14);
+        }
+
+        .skill-pill {
+            border: 1px solid rgba(255,255,255,.10);
+            background: rgba(255,255,255,.04);
+            transition: all .2s ease;
+        }
+
+        .skill-pill:hover {
+            border-color: rgba(139,92,246,.6);
+            background: rgba(139,92,246,.12);
+            transform: translateY(-2px);
+        }
+
+        .accent-line {
+            width: 72px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--purple), var(--cyan));
+        }
+
+        .project-number {
+            font-family: "Space Grotesk", sans-serif;
+            color: rgba(196,181,253,.35);
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        ::selection {
+            background: var(--purple);
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- NAV -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-[#0b1020]/80 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <a href="#" class="font-display font-bold tracking-tight text-lg">
+                ANITA<span class="text-violet-400">.</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-7 text-sm text-slate-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#education" class="hover:text-white transition">Education</a>
+            </div>
+
+            <a href="#contact"
+               class="text-sm font-medium px-4 py-2 rounded-lg bg-violet-500 hover:bg-violet-400 transition">
+                Contact
+            </a>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="grid-bg relative overflow-hidden">
+
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 left-[10%] w-80 h-80 bg-violet-600/15 blur-[120px] rounded-full"></div>
+            <div class="absolute right-[5%] top-40 w-72 h-72 bg-sky-500/10 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-36 min-h-[78vh] flex items-center">
+
+            <div class="max-w-4xl">
+
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass text-sm text-violet-200 mb-8">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    SEEKING · PM / GAME PLANNING OPPORTUNITY
+                </div>
+
+                <p class="section-label mb-5">
+                    USER INSIGHT × DATA × TECHNOLOGY
+                </p>
+
+                <h1 class="font-display text-5xl md:text-7xl font-bold tracking-[-.06em] leading-[1.08]">
+                    從使用者需求出發，
+                    <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-violet-400 to-sky-300">
+                        把想法變成產品。
+                    </span>
+                </h1>
+
+                <p class="mt-8 max-w-2xl text-base md:text-xl leading-relaxed text-slate-300">
+                    我是梁芷芸 Anita，具備資訊管理與行銷背景，
+                    曾接觸使用者資料分析、平台營運與第一線客戶服務，
+                    並透過 AI 新秀計畫持續累積 Python、AI 與專案實作能力。
+                    希望將使用者理解、數據分析與技術溝通能力，
+                    投入產品企劃與遊戲產品的持續優化。
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-10">
+
+                    <a href="#projects"
+                       class="px-6 py-3 rounded-xl bg-violet-500 hover:bg-violet-400 font-medium transition shadow-lg shadow-violet-900/30">
+                        查看專案作品 ↓
+                    </a>
+
+                    <a href="#experience"
+                       class="px-6 py-3 rounded-xl border border-white/15 hover:border-violet-400 text-slate-200 hover:text-white transition">
+                        我的經歷
+                    </a>
+
+                </div>
+
+
+                <!-- VALUE CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16">
+
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-violet-300 text-sm mb-3">01</div>
+                        <h2 class="font-bold">使用者視角</h2>
+                        <p class="text-sm text-slate-400 mt-2">
+                            從平台使用者、客戶互動與市場需求理解問題。
+                        </p>
+                    </div>
+
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-sky-300 text-sm mb-3">02</div>
+                        <h2 class="font-bold">數據與分析</h2>
+                        <p class="text-sm text-slate-400 mt-2">
+                            具資料整理、成效追蹤與數據分析相關經驗。
+                        </p>
+                    </div>
+
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-emerald-300 text-sm mb-3">03</div>
+                        <h2 class="font-bold">技術理解</h2>
+                        <p class="text-sm text-slate-400 mt-2">
+                            具 Python、AI、API 與雲端 AI 應用基礎。
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-[320px_1fr] gap-12 lg:gap-20 items-start">
+
+            <div class="relative">
+
+                <div class="absolute inset-0 bg-gradient-to-br from-violet-500/30 to-sky-500/20 rounded-3xl rotate-3"></div>
+
+                <img src="1.jpeg"
+                     alt="梁芷芸 Anita Liang"
+                     class="relative w-full aspect-square object-cover rounded-3xl border border-white/10">
+
+            </div>
+
+            <div>
+
+                <p class="section-label mb-4">ABOUT ME</p>
+
+                <h2 class="section-title">
+                    我不是只想做功能，
+                    <br class="hidden md:block">
+                    我更想理解「為什麼要做」。
+                </h2>
+
+                <div class="accent-line mt-7 mb-8"></div>
+
+                <div class="space-y-5 text-slate-300 leading-8">
+
+                    <p>
+                        我具備<strong class="text-white">資訊管理與行銷雙重背景</strong>。
+                        在過去的工作與學習經驗中，我曾接觸社群內容、平台營運、
+                        使用者行為資料、行銷成效追蹤與客戶問題處理，
+                        逐漸培養從<strong class="text-violet-300">使用者需求、數據與實際執行</strong>三個角度思考問題的習慣。
+                    </p>
+
+                    <p>
+                        為了進一步建立技術理解能力，我後續參與 AI 新秀計畫，
+                        學習 AI 與雲端相關技術，並透過專案實作接觸 Python、
+                        LLM、API、Streamlit 與資料安全等主題。
+                    </p>
+
+                    <p>
+                        我希望未來投入<strong class="text-white">產品企劃與遊戲企劃</strong>相關工作，
+                        不只停留在提出想法，而是持續學習如何整理需求、分析資料、
+                        與不同職能溝通，並參與產品從問題發現到實際落地的過程。
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24 px-6 bg-[#0e1527] border-y border-white/5">
+
+        <div class="max-w-6xl mx-auto">
+
+            <p class="section-label mb-4">EXPERIENCE</p>
+
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+                <h2 class="section-title">
+                    經歷帶給我的，
+                    <br>
+                    不只是工作技能。
+                </h2>
+
+                <p class="max-w-sm text-slate-400 leading-7">
+                    每一段經歷都讓我更理解使用者、流程、資料與溝通的重要性。
+                </p>
+            </div>
+
+
+            <div class="border-l border-white/10 ml-3 pl-8 space-y-8">
+
+                <!-- AI -->
+                <article class="timeline-item relative glass card-hover rounded-2xl p-7 md:p-8">
+
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+
+                        <div>
+                            <p class="text-violet-300 font-medium text-sm">2025–2026</p>
+
+                            <h3 class="text-xl md:text-2xl font-bold mt-2">
+                                AI 新秀計畫
+                            </h3>
+
+                            <p class="text-slate-400 mt-1">
+                                AI 與雲端技術培訓／專案實作
+                            </p>
+                        </div>
+
+                        <span class="text-xs px-3 py-1.5 rounded-full bg-violet-500/10 text-violet-200 border border-violet-400/20">
+                            TECHNICAL DEVELOPMENT
+                        </span>
+
+                    </div>
+
+                    <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm leading-7 text-slate-300">
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <strong class="text-white block mb-2">技術能力累積</strong>
+                            深入學習雲端 AI 相關知識，並接觸 AI 應用與技術實作。
+                        </div>
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <strong class="text-white block mb-2">專案實作經驗</strong>
+                            透過 AI 實作演練與後續專案，持續建立從問題發想到技術實現的經驗。
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PLAYSEE -->
+                <article class="timeline-item relative glass card-hover rounded-2xl p-7 md:p-8">
+
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+
+                        <div>
+                            <p class="text-sky-300 font-medium text-sm">2022–2023</p>
+
+                            <h3 class="text-xl md:text-2xl font-bold mt-2">
+                                Playsee
+                            </h3>
+
+                            <p class="text-slate-400 mt-1">
+                                行銷助理 Marketing Assistant
+                            </p>
+                        </div>
+
+                        <span class="text-xs px-3 py-1.5 rounded-full bg-sky-500/10 text-sky-200 border border-sky-400/20">
+                            USER × DATA × OPERATION
+                        </span>
+
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4 mt-6">
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <div class="text-violet-300 font-display text-lg mb-3">01</div>
+                            <h4 class="font-bold">使用者資料觀察</h4>
+                            <p class="text-sm leading-7 text-slate-400 mt-2">
+                                接觸使用者影片與行為資料，從資料中理解使用者興趣與偏好。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <div class="text-sky-300 font-display text-lg mb-3">02</div>
+                            <h4 class="font-bold">成效追蹤與整理</h4>
+                            <p class="text-sm leading-7 text-slate-400 mt-2">
+                                追蹤平台與行銷相關數據，進行資料整理與成效觀察。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <div class="text-emerald-300 font-display text-lg mb-3">03</div>
+                            <h4 class="font-bold">使用者問題處理</h4>
+                            <p class="text-sm leading-7 text-slate-400 mt-2">
+                                透過線上客群互動與問題排除，累積第一線理解使用者需求的經驗。
+                            </p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WCJ -->
+                <article class="timeline-item relative glass card-hover rounded-2xl p-7 md:p-8">
+
+                    <div>
+                        <p class="text-orange-300 font-medium text-sm">2021–2022</p>
+
+                        <h3 class="text-xl md:text-2xl font-bold mt-2">
+                            維西杰 WCJ
+                        </h3>
+
+                        <p class="text-slate-400 mt-1">
+                            行政櫃檯 Administrative Front Desk
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mt-6">
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <strong class="text-white block mb-2">第一線需求與問題應對</strong>
+                            <p class="text-sm text-slate-400 leading-7">
+                                負責顧客接待、交易處理與現場業務諮詢，累積即時溝通與問題處理經驗。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <strong class="text-white block mb-2">資料與流程整理</strong>
+                            <p class="text-sm text-slate-400 leading-7">
+                                使用 Office 工具處理行政庶務、檔案分類與數位化報表建檔，重視資料準確性與工作流程。
+                            </p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- A-D STUDIO -->
+                <article class="timeline-item relative glass card-hover rounded-2xl p-7 md:p-8">
+
+                    <div>
+                        <p class="text-emerald-300 font-medium text-sm">2019–2023</p>
+
+                        <h3 class="text-xl md:text-2xl font-bold mt-2">
+                            A-D Studio
+                        </h3>
+
+                        <p class="text-slate-400 mt-1">
+                            行政與攝影助理 Administrative & Photography Assistant
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4 mt-6">
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <h4 class="font-bold">現場協作</h4>
+                            <p class="text-sm text-slate-400 leading-7 mt-2">
+                                參與不同類型攝影與活動現場，適應多變需求與工作節奏。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <h4 class="font-bold">內容與視覺</h4>
+                            <p class="text-sm text-slate-400 leading-7 mt-2">
+                                使用 Photoshop、Lightroom 進行影像後製，並接觸社群視覺與內容製作。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/[.03] rounded-xl p-5 border border-white/[.05]">
+                            <h4 class="font-bold">行政與營運支援</h4>
+                            <p class="text-sm text-slate-400 leading-7 mt-2">
+                                處理財務報表、薪資結算、文書與數位化資料管理，培養細節與執行能力。
+                            </p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 px-6">
+
+        <div class="max-w-6xl mx-auto">
+
+            <p class="section-label mb-4">CORE SKILLS</p>
+
+            <h2 class="section-title">
+                適合產品企劃的能力組合，
+                <br>
+                不只來自單一領域。
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6 mt-14">
+
+                <!-- PRODUCT -->
+                <div class="glass card-hover rounded-2xl p-7">
+
+                    <div class="w-12 h-12 rounded-xl bg-violet-500/15 flex items-center justify-center text-2xl mb-6">
+                        🎯
+                    </div>
+
+                    <h3 class="font-display text-xl font-bold">
+                        Product Thinking
+                    </h3>
+
+                    <p class="text-sm text-slate-400 leading-7 mt-3 mb-6">
+                        從使用者需求、資料與實際執行角度理解問題。
+                    </p>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">需求理解</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">資料整理</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">問題分析</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">企劃溝通</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">內容規劃</span>
+                    </div>
+
+                </div>
+
+
+                <!-- DATA -->
+                <div class="glass card-hover rounded-2xl p-7">
+
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/15 flex items-center justify-center text-2xl mb-6">
+                        📊
+                    </div>
+
+                    <h3 class="font-display text-xl font-bold">
+                        Data & Analysis
+                    </h3>
+
+                    <p class="text-sm text-slate-400 leading-7 mt-3 mb-6">
+                        具使用者資料、平台數據與行銷成效相關整理與分析經驗。
+                    </p>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">數據分析</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">SPSS</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">Excel</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">成效追蹤</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">資料整理</span>
+                    </div>
+
+                </div>
+
+
+                <!-- TECH -->
+                <div class="glass card-hover rounded-2xl p-7">
+
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/15 flex items-center justify-center text-2xl mb-6">
+                        ⚡
+                    </div>
+
+                    <h3 class="font-display text-xl font-bold">
+                        Technology
+                    </h3>
+
+                    <p class="text-sm text-slate-400 leading-7 mt-3 mb-6">
+                        建立技術理解能力，能理解 AI 應用與部分系統實作流程。
+                    </p>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">Python</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">AI / LLM</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">API</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">Azure AI</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">n8n</span>
+                        <span class="skill-pill px-3 py-2 rounded-lg text-sm">Streamlit</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 px-6 bg-[#0e1527] border-y border-white/5">
+
+        <div class="max-w-6xl mx-auto">
+
+            <p class="section-label mb-4">SELECTED PROJECTS</p>
+
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                <h2 class="section-title">
+                    專案讓我練習的，
+                    <br>
+                    是把問題變成解法。
+                </h2>
+
+                <p class="max-w-md text-slate-400 leading-7">
+                    雖然我的專案主題不是遊戲，但我希望透過作品展現：
+                    我能從問題出發，思考功能、流程、使用方式與技術實現。
+                </p>
+            </div>
+
+
+            <!-- PROJECT 01 -->
+            <article class="glass card-hover rounded-3xl p-7 md:p-10 mt-14 overflow-hidden">
+
+                <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-10">
+
+                    <div>
+
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="section-label">PROJECT 01</p>
+
+                                <h3 class="text-2xl md:text-3xl font-bold mt-3">
+                                    NutriPaw AI
+                                </h3>
+
+                                <p class="text-violet-300 mt-2">
+                                    寵物營養資訊分析與提醒系統
+                                </p>
+                            </div>
+
+                            <span class="project-number">01</span>
+                        </div>
+
+
+                        <div class="mt-8 space-y-6">
+
+                            <div>
+                                <p class="text-sm font-bold text-white mb-2">
+                                    問題
+                                </p>
+
+                                <p class="text-slate-400 leading-7">
+                                    面對寵物食品成分與營養資訊時，使用者需要花時間理解成分內容與熱量資訊。
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-sm font-bold text-white mb-2">
+                                    解法思考
+                                </p>
+
+                                <p class="text-slate-400 leading-7">
+                                    透過生成式 AI 協助解析食品成分，並結合營養計算與通知功能，
+                                    將資訊整理成較容易理解與追蹤的形式。
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-sm font-bold text-white mb-2">
+                                    專案實作
+                                </p>
+
+                                <ul class="space-y-2 text-slate-400 text-sm leading-7">
+                                    <li>• 串接 Gemini 2.5 Flash 進行成分資訊解析</li>
+                                    <li>• 使用 Streamlit 建立互動式操作介面</li>
+                                    <li>• 整合 LINE API 進行通知與提醒</li>
+                                    <li>• 建立 RER、DER 營養計算功能</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bg-gradient-to-br from-violet-500/15 to-sky-500/10 rounded-3xl border border-white/10 p-8 flex flex-col justify-between">
+
+                        <div>
+
+                            <p class="text-sm text-slate-400">
+                                WHAT I PRACTICED
+                            </p>
+
+                            <div class="space-y-5 mt-7">
+
+                                <div>
+                                    <h4 class="font-bold">從使用情境思考功能</h4>
+                                    <p class="text-sm text-slate-400 leading-7 mt-2">
+                                        練習將使用者面對的資訊問題，拆解成可實作的系統功能。
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold">技術與產品功能連結</h4>
+                                    <p class="text-sm text-slate-400 leading-7 mt-2">
+                                        練習理解 LLM、API 與前端介面如何共同支援產品使用流程。
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-8">
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">Python</span>
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">Gemini 2.5 Flash</span>
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">Streamlit</span>
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">LINE API</span>
+                        </div>
+
+                        <a href="https://drive.google.com/file/d/11FJ6g2-imvDB6fSlu_EJh-t9YUGU7lIr/view?usp=sharing"
+                           target="_blank"
+                           class="mt-8 inline-flex justify-center items-center py-3 rounded-xl bg-violet-500 hover:bg-violet-400 transition font-medium">
+                            查看專案成果 ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+            <article class="glass card-hover rounded-3xl p-7 md:p-10 mt-8 overflow-hidden">
+
+                <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-10">
+
+                    <div>
+
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="section-label">PROJECT 02</p>
+
+                                <h3 class="text-2xl md:text-3xl font-bold mt-3">
+                                    企業級隱私安全 AI
+                                </h3>
+
+                                <p class="text-sky-300 mt-2">
+                                    數據去識別化與還原 Pipeline
+                                </p>
+                            </div>
+
+                            <span class="project-number">02</span>
+                        </div>
+
+
+                        <div class="mt-8 space-y-6">
+
+                            <div>
+                                <p class="text-sm font-bold text-white mb-2">
+                                    問題
+                                </p>
+
+                                <p class="text-slate-400 leading-7">
+                                    企業在使用外部大型語言模型時，需要考量敏感資訊外流與資料安全問題。
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-sm font-bold text-white mb-2">
+                                    解法思考
+                                </p>
+
+                                <p class="text-slate-400 leading-7">
+                                    設計資料進入外部 LLM 前的遮蔽流程，以及回傳內容後的對應還原流程，
+                                    建立 AI 與企業敏感資料之間的安全中介機制。
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-sm font-bold text-white mb-2">
+                                    核心流程
+                                </p>
+
+                                <div class="flex flex-wrap items-center gap-2 text-sm">
+                                    <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10">
+                                        Sensitive Data
+                                    </span>
+
+                                    <span class="text-violet-300">→</span>
+
+                                    <span class="px-3 py-2 rounded-lg bg-violet-500/10 border border-violet-400/20">
+                                        Tokenization
+                                    </span>
+
+                                    <span class="text-violet-300">→</span>
+
+                                    <span class="px-3 py-2 rounded-lg bg-white/5 border border-white/10">
+                                        LLM
+                                    </span>
+
+                                    <span class="text-violet-300">→</span>
+
+                                    <span class="px-3 py-2 rounded-lg bg-emerald-500/10 border border-emerald-400/20">
+                                        Restore
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bg-gradient-to-br from-sky-500/10 to-emerald-500/10 rounded-3xl border border-white/10 p-8">
+
+                        <p class="text-sm text-slate-400">
+                            WHAT I PRACTICED
+                        </p>
+
+                        <div class="space-y-6 mt-7">
+
+                            <div>
+                                <h4 class="font-bold">流程拆解</h4>
+                                <p class="text-sm text-slate-400 leading-7 mt-2">
+                                    練習將複雜問題拆分成不同階段，思考資料如何在系統中流動。
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold">技術需求理解</h4>
+                                <p class="text-sm text-slate-400 leading-7 mt-2">
+                                    接觸 Tokenization、LLM 與資料安全相關概念，建立技術與產品需求之間的理解。
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold">問題導向思考</h4>
+                                <p class="text-sm text-slate-400 leading-7 mt-2">
+                                    從企業實際使用 AI 時可能遇到的風險出發，思考可行的系統流程。
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mt-8">
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">Python</span>
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">LLM</span>
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">Tokenization</span>
+                            <span class="skill-pill px-3 py-2 rounded-lg text-xs">Data Security</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24 px-6">
+
+        <div class="max-w-6xl mx-auto">
+
+            <p class="section-label mb-4">EDUCATION & CERTIFICATIONS</p>
+
+            <h2 class="section-title">
+                資訊 × 行銷，
+                <br>
+                形成我現在的能力基礎。
+            </h2>
+
+
+            <div class="grid md:grid-cols-2 gap-6 mt-14">
+
+                <article class="glass card-hover rounded-2xl p-8">
+
+                    <p class="text-violet-300 text-sm font-medium">
+                        2021–2023
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-3">
+                        臺北市立大學
+                    </h3>
+
+                    <p class="text-slate-300 mt-2">
+                        都市產業經營與行銷學系
+                    </p>
+
+                    <p class="text-sm text-slate-400 leading-7 mt-5">
+                        學習從市場、產業與使用者角度理解需求，
+                        建立行銷與資料分析相關思維。
+                    </p>
+
+                </article>
+
+
+                <article class="glass card-hover rounded-2xl p-8">
+
+                    <p class="text-sky-300 text-sm font-medium">
+                        2019–2021
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-3">
+                        國立臺北護理健康大學
+                    </h3>
+
+                    <p class="text-slate-300 mt-2">
+                        資訊管理系
+                    </p>
+
+                    <p class="text-sm text-slate-400 leading-7 mt-5">
+                        修習資訊管理相關課程，
+                        建立資訊邏輯、系統分析與資料處理基礎。
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- CERTIFICATIONS -->
+            <div class="mt-16">
+
+                <h3 class="font-display text-xl font-bold mb-6">
+                    Relevant Certifications
+                </h3>
+
+                <div class="grid md:grid-cols-3 gap-4">
+
+                    <div class="glass rounded-xl p-5">
+                        <p class="text-violet-300 text-xs font-bold tracking-widest">
+                            AI & CLOUD
+                        </p>
+                        <h4 class="font-bold mt-3 leading-7">
+                            AI-900 Microsoft Certified: Azure AI Fundamentals
+                        </h4>
+                    </div>
+
+                    <div class="glass rounded-xl p-5">
+                        <p class="text-sky-300 text-xs font-bold tracking-widest">
+                            AUTOMATION
+                        </p>
+                        <h4 class="font-bold mt-3 leading-7">
+                            n8n Level 1 核心認證
+                        </h4>
+                    </div>
+
+                    <div class="glass rounded-xl p-5">
+                        <p class="text-emerald-300 text-xs font-bold tracking-widest">
+                            INFORMATION
+                        </p>
+                        <h4 class="font-bold mt-3 leading-7">
+                            電腦軟體應用 乙級技術士
+                        </h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WHY ME -->
+    <section class="py-24 px-6 bg-gradient-to-br from-violet-950/50 to-[#0e1527] border-y border-white/5">
+
+        <div class="max-w-5xl mx-auto text-center">
+
+            <p class="section-label mb-5">
+                WHY PM / GAME PLANNING
+            </p>
+
+            <h2 class="section-title">
+                我正在尋找一個能把
+                <br>
+                「使用者、數據與技術」
+                <br>
+                連在一起的位置。
+            </h2>
+
+            <p class="max-w-3xl mx-auto text-slate-300 leading-8 mt-8">
+                我知道自己目前不是有多年遊戲企劃經驗的人，
+                也不會把沒有做過的事情包裝成資深 PM。
+                但我擁有資訊管理與行銷背景，也累積過使用者互動、
+                資料整理與專案實作經驗。
+                我希望從 PM 遊戲企劃助理開始，
+                持續學習產品規劃、需求分析、跨部門合作與數據解讀，
+                在實際產品環境中建立更完整的能力。
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <footer id="contact" class="py-16 px-6 border-t border-white/10">
+
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+
+            <div>
+
+                <div class="font-display text-2xl font-bold">
+                    梁芷芸 <span class="text-violet-400">Anita Liang</span>
+                </div>
+
+                <p class="text-slate-400 text-sm mt-3">
+                    PM / Product Planning · User Insight · Data · Technology
+                </p>
+
+            </div>
+
+            <p class="text-slate-500 text-sm">
+                © 2026 Anita Liang
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
